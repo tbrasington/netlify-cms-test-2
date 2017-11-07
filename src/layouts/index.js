@@ -43,8 +43,8 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <script>{`
-   
+    <script type="application/script">{`
+    {
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
@@ -54,7 +54,7 @@ const TemplateWrapper = ({ children }) => (
           }
         });
       }
-    
+    }
 `}</script>
     <Header />
     <div
